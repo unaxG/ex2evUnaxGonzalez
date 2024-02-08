@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ex2evUnax_gonzalez</string>
+    <string name="nombreLugar">Estacion De Abando</string>
+    <string name="button">Volver a mapa</string>
 </resources>
