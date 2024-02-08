@@ -2,4 +2,5 @@
     <string name="app_name">ex2evUnax_gonzalez</string>
     <string name="nombreLugar">Estacion De Abando</string>
     <string name="button">Volver a mapa</string>
+    <string name="abando">Abando es un barrio céntrico de Bilbao, en cuyas calles se encuentran la mayoría de tiendas, centros y oficinas. Posee una estacion de bus, metro y tren.</string>
 </resources>

@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 
+import android.content.Context;
+import android.os.Bundle;
+import android.graphics.drawable.Drawable;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
 import org.osmdroid.util.GeoPoint;
@@ -16,6 +18,7 @@ import org.osmdroid.views.overlay.ItemizedIconOverlay;
 import org.osmdroid.views.overlay.ItemizedOverlayWithFocus;
 import org.osmdroid.views.overlay.OverlayItem;
 import com.example.ex2evunax_gonzalez.R;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
@@ -47,6 +50,7 @@ public class FragmentMapa extends Fragment {
     IMapController mapController;
     int datos = 0;
 
+
     public FragmentMapa() {
         // Required empty public constructor
     }
@@ -75,14 +79,17 @@ public class FragmentMapa extends Fragment {
 
 
 
-            mapa = view.findViewById(R.id.mapaView);
 
-            //seteamos el control del mapa
+            mapa = view.findViewById(R.id.mapaView);
+            mapa.setTileSource(TileSourceFactory.MAPNIK);
+
+        //seteamos el control del mapa
             mapa.setMultiTouchControls(true);
             //centramos el mapa
             GeoPoint centro = new GeoPoint(43.135, -2.5391);
 
             mapController = mapa.getController();
+
             mapController.setCenter(centro);
             mapController.setZoom(16.0);
 
